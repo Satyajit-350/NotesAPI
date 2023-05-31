@@ -28,7 +28,7 @@ const sendResetPasswordMail = async(name,email,token) =>{
             to : email,
             subject : "For Reset Password",
             //TODO reset password link we have to create 
-            html : '<p> Hii, Please copy this link and <a href ="https://notesapi-production-72e7.up.railway.app/users/reset-password?token='+token+'"> reset your password</a>'
+            html : '<p> Hii, Please copy this link and <a href ="https://notes-api-india.onrender.com/users/reset-password?token='+token+'"> reset your password</a>'
         }
 
         transporter.sendMail(mailoptions,function(error,info){
