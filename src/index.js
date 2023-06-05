@@ -3,6 +3,7 @@ const express = require("express"); //import express
 const app = express()
 const userRouter = require("./routes/userRoutes");
 const notesRouter = require("./routes/notesRoutes");
+const quotesRouter = require("./routes/quotesRoutes");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const path = require("path")
@@ -25,6 +26,7 @@ app.use((req,res,next) =>{
 
 app.use("/users",userRouter) //here we will access the userRouter like this -> /users/signin or /users/signup
 app.use("/note",notesRouter)
+app.use("/quote",quotesRouter)
 
 //defie methods like get,put,post etc
 //here "/"" means root and (req,res) means request,response
