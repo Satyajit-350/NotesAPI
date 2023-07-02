@@ -8,7 +8,8 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const path = require("path")
 
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const audioNotesRouter = require("./routes/audioNotesRoutes");
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use((req,res,next) =>{
 app.use("/users",userRouter) //here we will access the userRouter like this -> /users/signin or /users/signup
 app.use("/note",notesRouter)
 app.use("/quote",quotesRouter)
+app.use("/audioNote",audioNotesRouter)
 
 //defie methods like get,put,post etc
 //here "/"" means root and (req,res) means request,response
